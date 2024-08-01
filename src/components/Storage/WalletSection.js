@@ -14,7 +14,7 @@ export default function Home() {
                 <p className='text-3xl'>Welcome to Kaspa Wallet</p>
                 <div className='flex flex-row gap-5 mt-16 justify-center'>
                   <div className='hover:cursor-pointer rounded-lg bg-[#009688] p-4 text-xl'>Create New Wallet</div>
-                  <div className='hover:cursor-pointer rounded-lg bg-[#009688] p-4 text-xl'>Recover from Seed</div>
+                  <a href="/recover"><div className='hover:cursor-pointer rounded-lg bg-[#009688] p-4 text-xl'>Recover from Seed</div></a>
                 </div>
               </div>
             </div>

@@ -3,9 +3,9 @@ import '../css/kaspa.css'
 import '../css/animations.css';
 
 import Header from './Storage/Header';
-import WalletSection from './Storage/WalletSection';
+import RecoverSection from './Storage/RecoverSection';
 
-function KaspaManage () {
+function RecoverWallet () {
     return (
       <div className="App relaitve bg-[#0B0B0F] h-screen overflow-hidden">
         {/* Background images */}
@@ -18,9 +18,9 @@ function KaspaManage () {
 
         {/* Main sections */}
         <Header />
-        <WalletSection />
+        <RecoverSection />
       </div>
     );
 }
 
-export default KaspaManage;
+export default RecoverWallet;

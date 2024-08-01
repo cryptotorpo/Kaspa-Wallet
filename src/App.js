@@ -1,20 +1,15 @@
 import './App.css';
-import KaspaManage from './components/KaspaManage';
+import CreateWallet from './components/CreateWallet';
+import RecoverWallet from './components/RecoverWallet';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { useState, createContext, useContext } from 'react';
 import MyContext from './MyContext';
 
 const MyProvider = ({ children }) => {
-  const [network, setNetwork] = useState("Bitcoin");
-  const [signed, setSigned] = useState(0);
-  const [address, setAddress] = useState("");
-  const [authToken, setAuthToken] = useState("");
-  const [walletType, setWalletType] = useState("Unisat");
-  const [refreshStorage, setRefreshStorage] = useState(0);
-  
+  const [network, setNetwork] = useState("Bitcoin");  
   return (
-    <MyContext.Provider value={{ refreshStorage, setRefreshStorage, signed, setSigned, network, setNetwork, address, setAddress, authToken, setAuthToken, walletType, setWalletType}}>
+    <MyContext.Provider value={{ network, setNetwork}}>
       {children}
     </MyContext.Provider>
   );
@@ -25,7 +20,8 @@ function App() {
     <MyProvider>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<KaspaManage />}></Route>
+          <Route path='/' element={<CreateWallet />}></Route>
+          <Route path='/recover' element={<RecoverWallet />}></Route>
         </Routes>
       </BrowserRouter>
     </MyProvider>
