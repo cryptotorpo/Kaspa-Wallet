@@ -2,23 +2,18 @@ import * as React from 'react'
 import '../css/kaspa.css'
 import '../css/animations.css';
 
-import Header from './Storage/Header';
-import WalletSection from './Storage/WalletSection';
-
 function CreateWallet () {
     return (
-      <div className="App relaitve bg-[#0B0B0F] h-screen overflow-hidden">
-        {/* Background images */}
-        <img src='./img/bg-gradient-img1.png' className='absolute top-0 left-0'></img>
-        <img src="./img/bg-gradient-img2.png" className='absolute bottom-0 right-0'></img>
-        <img src="./img/bg-img.png" className='h-screen absolute top-[-20px] left-0'></img>
-        <img src="./img/star1.png" className='absolute hidden fadeIn lg:block right-40 top-1/4 w-14 h-14'></img>
-        <img src="./img/star2.png" className='absolute hidden w-20 h-20 fadeIn lg:block left-40 bottom-1/4'></img>
-        <img src="./img/star3.png" className='absolute hidden fadeIn lg:block left-20 bottom-1/3 w-14 h-14'></img>
-
-        {/* Main sections */}
-        <Header />
-        <WalletSection />
+      <div className="App relaitve overflow-hidden">
+        <div className='flex justify-center items-center h-full w-full'>
+          <div className='border-2 border-[#009688] py-10 w-full md:w-1/3 flex items-center flex-col font-medium'>
+            <p className='text-lg'>Welcome to Kaspa Wallet</p>
+            <div className='flex flex-row gap-3 mt-10'>
+              <a href="/info"><div className='bg-[#009688] border-[#009688] text-white rounded-md p-3 border-[2px] hover:text-black hover:border-black hover:cursor-pointer'>Create New Wallet</div></a>
+              <a href="/recover"><div className='bg-[#009688] border-[#009688] text-white rounded-md p-3 border-[2px] hover:text-black hover:border-black hover:cursor-pointer'>Recover From Seed</div></a>
+            </div>
+          </div>
+        </div>
       </div>
     );
 }
